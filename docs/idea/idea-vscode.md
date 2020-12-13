@@ -13,37 +13,37 @@ title: VsCode 编辑器
 
 ### 格式化插件
 
-- Prettier - Code formatter (vue 中可能需要安装**vetur**配合才能生效)
+-   Prettier - Code formatter (vue 中可能需要安装**vetur**配合才能生效)
 
 > 首选项->设置 搜索 formmat On Save 勾选 保存代码自动格式化(如果格式化插件可用的话); 快捷键：**alt+shift+p**
 
 ### 找括号
 
-- Bracket Pair Colorizer 2
+-   Bracket Pair Colorizer 2
 
 > 可以清楚看到多层括号层级关系，并行 js 中对层级划分
 
 ### 自动更改 HTML 配对标签 1
 
-- Auto Rename Tag
+-   Auto Rename Tag
 
 ### 自动补全
 
-- Path Intellisense
+-   Path Intellisense
 
 ### 通过类找到样式定义地址
 
-- CSS Peek
+-   CSS Peek
 
 > 选择 class **F12**显示（vue 中无法找到组件内的类）
 
 ### 美化
 
-- vscode-icon (设置文件夹与文件的图标)
+-   vscode-icon (设置文件夹与文件的图标)
 
 ### Emmet 快速生成 html 代码
 
-- Mithril Emmet
+-   Mithril Emmet
 
 语法：
 
@@ -52,17 +52,41 @@ title: VsCode 编辑器
 ```
 
 ### 基础常用
-- Chinese (Simplified) Language Pack for Visual Studio Code   (中文汉化包)
-- Vetur (vue必装)
-- EditorConfig (是一种被各种编辑器广泛支持的配置 .editorconfig)
-- live-server (可运行的静态文件右键直接开启服务 电脑上也要全局安装)
-- Better Comments (! * todo //美化注释)
-- Autoprefixer  2.2.0 (前缀 shift+ctrl+p 选择 autoprefixer CSS,电脑上也要全局安装)
+
+-   Chinese (Simplified) Language Pack for Visual Studio Code (中文汉化包)
+-   Vetur (vue 必装)
+-   EditorConfig (是一种被各种编辑器广泛支持的配置 .editorconfig)
+-   live-server (可运行的静态文件右键直接开启服务 电脑上也要全局安装)
+-   Better Comments (! \* todo //美化注释)
+-   Autoprefixer 2.2.0 (前缀 shift+ctrl+p 选择 autoprefixer CSS,电脑上也要全局安装)
+-   Code Runner (运行程序 node、Python....)
 
 ## 快捷键
+
+常用
+
+-   ctrl+shift+` 或 5 (打开终端或多个终端)
+-   ctrl+k0,ctrl+kj (折叠展开代码)
+-   ctrl+alt+F (格式化)
+-   ctrl+w (关闭页面)
+-   alt+上下键 (移动一行)
+-   shift+alt+上下键 (复制一行)
+-   ctrl+/,ctrl+shift+A (单，多行注释)
 
 [参考资料](https://www.cnblogs.com/jpfss/p/10956650.html)
 
 ## editorconfig 配置
 
 [参考资料](https://juejin.cn/post/6860440041039069191#heading-10)
+
+## Python
+
+插件
+
+-   Python
+  
+## Markdown
+- Markdown All in One (快捷键自动不全编写markdown文档)
+- Markdown Preview Enhanced (预览)
+- Paste Image (快速插入图片，网站随便找图片，复制图片，ctrl+alt+v)
+  ![](2020-12-13-16-03-16.png)

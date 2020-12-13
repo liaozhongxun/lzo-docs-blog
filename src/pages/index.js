@@ -6,8 +6,8 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 let a = {
-	styles:'333'
-}
+    styles: "333",
+};
 const features = [
     {
         // title: 'Easy to Use',
