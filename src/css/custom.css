@@ -1,0 +1,75 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #007be2;
+  --ifm-color-primary-dark: #119cc5;
+  --ifm-color-primary-darker: #05879d;
+  --ifm-color-primary-darkest: #007a87;
+  --ifm-color-primary-light: #6dc8f2;
+  --ifm-color-primary-lighter: #c6ebfc;
+  --ifm-color-primary-lightest: #f2fbff;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: "Raleway", "PingFang SC", "Microsoft Yahei", Helvetica,
+    sans-serif;
+
+  --ifm-navbar-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+  --ifm-toc-border-color: #f7f7f7;
+}
+
+html {
+  --post-title-color: #313131;
+  --post-pub-date-color: #8c8c8c;
+  --divider-color: #ebebeb;
+}
+
+html[data-theme="dark"] {
+  --post-title-color: white;
+  --post-pub-date-color: var(--ifm-color-gray-100);
+  --divider-color: #353535;
+  --ifm-toc-border-color: #313131;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--ifm-font-weight-semibold);
+} */
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/*=====================================================================================*/
+
+h1{
+  font-size: 1.8rem !important;
+}
+h2{
+  font-size: 1.4rem !important;
+}
+h3{
+  font-size: 1.1rem !important;
+}
+/*h4{
+  font-size: 0.9rem !important;
+}*/
+.margin-vert--xl{
+  display: none;
+}
+
+
+/*处理注释倾斜问题*/
+.token-line .comment{
+  font-style: normal !important;
+}
