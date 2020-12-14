@@ -60,8 +60,17 @@ title: VsCode 编辑器
 - Autoprefixer  2.2.0 (前缀 shift+ctrl+p 选择 autoprefixer CSS,电脑上也要全局安装)
 - Code Runner (右键运行各种服务端代码)
 
-
 ## 快捷键
+
+常用
+
+-   ctrl+shift+` 或 5 (打开终端或多个终端)
+-   ctrl+k0,ctrl+kj (折叠展开代码)
+-   ctrl+alt+F (格式化)
+-   ctrl+w (关闭页面)
+-   alt+上下键 (移动一行)
+-   shift+alt+上下键 (复制一行)
+-   ctrl+/,ctrl+shift+A (单，多行注释)
 
 [参考资料](https://www.cnblogs.com/jpfss/p/10956650.html)
 
@@ -70,7 +79,6 @@ title: VsCode 编辑器
 [参考资料](https://juejin.cn/post/6860440041039069191#heading-10)
 
 ## Markdown
-- Markdown All in One (markdown快捷键与格式化)
-- Markdown Preview Enhanced (markdown预览)
-- 
-
+- Markdown All in One (快捷键自动不全编写markdown文档)
+- Markdown Preview Enhanced (预览)
+- Paste Image (快速插入图片，网站随便找图片，复制图片，ctrl+alt+v)
