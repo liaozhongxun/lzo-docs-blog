@@ -71,7 +71,12 @@ title: VsCode 编辑器
 -   alt+上下键 (移动一行)
 -   shift+alt+上下键 (复制一行)
 -   ctrl+/,ctrl+shift+A (单，多行注释)
+-   ctrl+shift+L(选中所有相同内容)
+-   
 -   alt+鼠标左键(同时选择多个焦点)
+-   Ctrl + Alt+上下键(上下行出现多个光标)
+-   shift+alt，再使用鼠标拖动，也可以出现竖直的列光标，同时可以选中多列。
+
 
 [参考资料](https://www.cnblogs.com/jpfss/p/10956650.html)
 
