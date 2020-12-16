@@ -57,5 +57,8 @@ module.exports.export2 = function () {
 const { export1, export2 } = require("./node");
 export1();
 ```
-
+### 爬虫
+1. 获取目标网站 (http.get)
+2. 分析网站内容 (cheerio 通过jq选择器获取想要的内容 或直接用正则匹配)
+3. 获取有效信息 下载或其他操作
 [参考资料](https://www.bilibili.com/video/BV1Ci4y1L7gk?p=7)
