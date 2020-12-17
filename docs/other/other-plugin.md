@@ -29,6 +29,17 @@ npm install bower -g
 //直接使用
 bower install xxxx
 ```
+
+### vuex-persistedstate
+> vuex持久化
+
+```shell
+import createPersistedState from "vuex-persistedstate"
+
+const store = new Vuex.Store({
+    plugins: [createPersistedState()]
+})
+```
 ---
 ## web常用插件
 ### 
