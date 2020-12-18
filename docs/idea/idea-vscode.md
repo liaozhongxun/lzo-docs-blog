@@ -76,8 +76,14 @@ title: VsCode 编辑器
 -   alt+鼠标左键(同时选择多个焦点)
 -   Ctrl + Alt+上下键(上下行出现多个光标)
 -   shift+alt，再使用鼠标拖动，也可以出现竖直的列光标，同时可以选中多列。
-
-
+  
+-   ctrl+shift+回车,往上换行 
+-   ctrl+shift+K, 删除行
+-   ctrl + 回车 ,往下换行
+-   Home/End 行头行尾
+-   ctrl+Home/End 页头页尾
+-   shift + (ctrl?) + Home/End/上下左右 选择行头到行尾或页头到页尾
+-   
 [参考资料](https://www.cnblogs.com/jpfss/p/10956650.html)
 
 ## editorconfig 配置
