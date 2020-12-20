@@ -83,7 +83,7 @@ title: 浏览器知识点
     Accept: //接收类型，表示浏览器支持的MIME类型（对标服务端返回的Content-Type）
     Accept-Encoding：//浏览器支持的压缩类型,如gzip等,超出类型不能接收
     Content-Type：//客户端发送出去请求体内容的类型
-        'application/x-www-form-urlencoded': 'URLSearchParams:name=username&age=20'
+        'application/x-www-form-urlencoded': 'URLSearchParams:name=username&age=20' 表单格式
         'application/json': "{name:'username',age:20}"
         'multipart/form-data': "FormData 对象"
         'Blob/BufferSource': "二进制数据"
