@@ -62,7 +62,7 @@ module.exports = {
             {
                 type: "category",
                 label: "NodeJS",
-                items: ["server/server-nodejs"],
+                items: ["server/server-nodejs","server/server-mongodb"],
             },
         ],
         编辑器: ["idea/idea-vscode"],
