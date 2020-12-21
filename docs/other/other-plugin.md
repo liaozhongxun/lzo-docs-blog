@@ -8,7 +8,7 @@ title: 插件
 
 ```shell
 npm install puer -g
-//直接使用
+# 直接使用
 puer --port xxxx 
 ```
 
@@ -17,17 +17,91 @@ puer --port xxxx
 
 ```shell
 npm install nodemon -g
-//直接使用
+# 直接使用
 nodemon server.js  
 ```
+
+### apidoc 
+> 根据指定注释格式生成api文档
+
+[官网](https://apidocjs.com/#install)
+
+```shell
+npm install apidoc -g
+
+# 注释格式
+/**
+ * @api {get} /user/:id Request User information
+ * @apiName GetUser
+ * @apiGroup User
+ *
+ * @apiParam {Number} id Users unique ID.
+ *
+ * @apiSuccess {String} firstname Firstname of the User.
+ * @apiSuccess {String} lastname  Lastname of the User.
+ */
+
+# 直接使用 -i(生成文档的文件夹) -o(输出文件夹)
+apidoc -i myapp/ -o apidoc/ -t mytemplate/
+
+```
+根目录下 apidoc.json 全局配置
+```json
+//apidoc.json
+{
+  "name": "example",
+  "version": "0.1.0",
+  "description": "apiDoc basic example",
+  "title": "Custom apiDoc browser title",
+  "url" : "https://api.github.com/v1"
+}
+```
+
 
 ### bower 
 > 第三方插件下载工具,也是一个包管理器
 
 ```shell
 npm install bower -g
-//直接使用
+# 直接使用
 bower install xxxx
+```
+
+### json-server 生成 REST API
+> 快速生成模拟可访问**REST** API接口,post请求时配置文件自动添加请求数据记录,并且每个接口都能使用GET、PPST、PUT(更新)、DELETE(删除)请求
+
+REST API
+- 同一个请求路径可以进行多个操作
+- 请求方式可以可以用到GET、PPST、PUT、DELETE
+- 浏览器的运行动作post、get、put、delete与CRUD统一
+  - 新增 (create，使用 POST )
+  - 读取 (read，使用 GET )
+  - 更新 (update，使用 PUT )
+  - 删除 (destroy，使用 DELETE)
+
+非 REST API
+- 请求方式与CRUD无关
+- 一个路径只对应一个操作
+- 一般只用GET/POST
+
+
+[github地址](https://github.com/typicode/json-server#getting-started)
+
+```shell
+npm install -g json-server
+# 根目录创建 db.json 配置接口数据
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
+
+# 生成接口并监听
+json-server --watch db.json
 ```
 
 ### vuex-persistedstate

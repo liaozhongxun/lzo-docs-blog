@@ -61,7 +61,7 @@ db;或者db.getName();        #查看当前所在数据库
 ```
 
 基本使用
-```JavaScript
+```javascript
 var mongoose = require("mongoose");
 //链接数据库
 //地址:mongodb://主机/数据库名

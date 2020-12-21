@@ -1,6 +1,9 @@
 ---
 title: 服务器请求
 ---
+## AJAX
+- AJAX 是特殊的http请求(对于服务器来说没有什么区别)
+<!-- - 浏览器端只用XHR与fetch发出的才是AJAX请求 -->
 ## XMLHttpRequest 
 > AJAX :Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);    
 
