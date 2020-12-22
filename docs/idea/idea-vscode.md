@@ -59,6 +59,7 @@ title: VsCode 编辑器
 - Better Comments (! * todo //美化注释)
 - Autoprefixer  2.2.0 (前缀 shift+ctrl+p 选择 autoprefixer CSS,电脑上也要全局安装)
 - Code Runner (右键运行各种服务端代码)
+- Image Preview (鼠标移入img路径显示图片)
 
 ## 快捷键
 

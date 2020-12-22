@@ -114,6 +114,19 @@ const store = new Vuex.Store({
     plugins: [createPersistedState()]
 })
 ```
+### vconsole
+> [移动端的控制台](https://www.npmjs.com/package/vconsole)
+
+```shell
+npm install vconsole -D
+
+import vConsole from 'vconsole'
+Vue.prototype.$vConsole = new vConsole();
+```
+
+### 乱七八糟小插件
+- [nprogress](https://www.npmjs.com/package/nprogress)  路由跳转上方出现进度条
+- [fastclick](https://www.npmjs.com/package/fastclick)  解决移动端click 300ms延迟问题
 ---
 ## web常用插件
 ### 
