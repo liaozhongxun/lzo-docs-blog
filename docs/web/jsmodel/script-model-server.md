@@ -1,6 +1,9 @@
 ---
 title: 服务器请求
 ---
+## AJAX
+- AJAX 是特殊的http请求(对于服务器来说没有什么区别)
+<!-- - 浏览器端只用XHR与fetch发出的才是AJAX请求 -->
 ## XMLHttpRequest 
 > AJAX :Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);    
 
@@ -17,66 +20,74 @@ title: 服务器请求
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>ajax</title>
-	</head>
-	<body>
-		<button onclick="getData()">get data</button>
-	</body>
-	<script>
-		function getData(){
-			var xhr = new XMLHttpRequest();  //创建
-			// xhr.abort() 外部手动停止xhr请求，添加一个标志可以禁止重复发送请求
-			
-			// 设置响应数据类型
-			xhr.responseType = 'json'; //如果返回的是json字符串直接解析
-			// 超时设置
-			xhr.timeout = 2000; //两秒数据没回来就算超时
-			xhr.ontimeout = function(){
-				console.log('请求超时,请稍后重试')
-			}
-			
-			//网络异常回调
-			xhr.onerror = function(){
-				console.log('网络异常')
-			}
-			
-			//初始化
-			//参数t用于IE调用接口缓存
-			//xhr.open('GET','http://127.0.0.1:8000/geturl?params=100&age=30&t='+new Date()); 
-			xhr.open('POST','http://127.0.0.1:8000/posturl');
-			
-			//设置请求头
-			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-			
-			//发送
-			//xhr.send(); 
-			xhr.send('{param:100,age:30}');  //post传参 格式不固定
-			
-			/*
+    <head>
+        <meta charset="utf-8" />
+        <title>ajax</title>
+    </head>
+    <body>
+        <button onclick="getData()">get data</button>
+    </body>
+    <script>
+        function getData() {
+            var xhr = new XMLHttpRequest(); //创建
+            // xhr.abort() 外部手动停止xhr请求，添加一个标志可以禁止重复发送请求
+
+            // 设置响应数据类型
+            xhr.responseType = "json"; //如果返回的是json字符串直接解析
+            // 超时设置
+            xhr.timeout = 2000; //两秒数据没回来就算超时
+            xhr.ontimeout = function () {
+                console.log("请求超时,请稍后重试");
+            };
+
+            //网络异常回调
+            xhr.onerror = function () {
+                console.log("网络异常");
+            };
+
+            // 初始化
+            // 参数t用于IE调用接口缓存
+            // xhr.open('GET','http://127.0.0.1:8000/geturl?params=100&age=30&t='+new Date(),async);
+            // async 默认true异步,设置false 同步
+            // async代表异步,去掉a变成sync就是同步
+            xhr.open("POST", "http://127.0.0.1:8000/posturl");
+
+            //设置请求头
+            xhr.setRequestHeader(
+                "Content-Type",
+                "application/x-www-form-urlencoded"
+            );
+
+            //发送
+            //xhr.send();
+            xhr.send("{param:100,age:30}"); //post传参 格式不固定
+
+            /*
 				当状态发生改变的时候 处理服务端返回结果
-				xhr.readyState:0  没发请求
-				               1  
-							   2
-							   3
-							   4 所有结果全部返回
+				xhr.readyState:0  没发请求(初始)
+				               1  open()之后
+							   2  send()之后
+							   3  请求中
+							   4  所有结果全部返回
 			*/
-			xhr.onreadystatechange = function(){
-				if(xhr.readyState == 4){
-					if(xhr.status >=200 && xhr.status<300){ //状态码
-						//响应行
-						console.log(xhr.status)
-						console.log(xhr.statusText) //状态字符串
-						console.log(xhr.getAllResponseHeaders())  //响应头
-						console.log(xhr.response) //响应体
-						
-					}
-				}
-			}
-		}
-	</script>
+            //当readyState发生改变时触发
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        //状态码
+                        //响应行
+                        console.log(xhr.status);
+                        console.log(xhr.statusText); //状态字符串
+                        console.log(xhr.getResponseHeaders("name")); //指定名称的响应头
+                        console.log(xhr.getAllResponseHeaders()); //响应头
+                        console.log(xhr.response); //响应体
+                    }
+                }
+            };
+        }
+    </script>
 </html>
+
 
 ```
 ### Axios请求
