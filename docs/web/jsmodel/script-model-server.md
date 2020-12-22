@@ -119,6 +119,26 @@ title: 服务器请求
 				console.log(res)
 			})
 		}
+
+        //封装
+        functioFn myAxios({
+            url,
+            method="GET",
+            params={},
+            body={}
+        }){
+            return new Promise((resolve,reject) => {
+                //1.通过xhr 创建 ajax
+                //创建xhr
+                const request = new XMLHttpRequest();
+                //打开连接
+                request.open(method,url,true)
+                //发送请求
+                request.send()
+                //2.1 成功了调用resolve
+                //2.2 失败了调用 reject
+            })
+        }
 	</script>
 </html>
 
