@@ -90,5 +90,24 @@ export1();
 ### 静态资源目录 static
 > 指定一个目录,目录可以被访问 类似Apache 的www
 
+### 图片上传
+> 原理:将图片、音乐等要上传的东西转换文数据流,通过ajax或form表单传到服务器，服务器接收这些数据后再写入文件系统之中
+
+1. 安装multer模块
+```shell
+npm install multer
+```
+2. 使用
+```javascript
+var multer = require('multer');
+```
+3. 设置路径与文件名
+```javascript
+var storage = multer.diskStorage({
+
+})
+```
+
+### node 跨域 cors中间件处理
 
 [参考资料](https://www.bilibili.com/video/BV1Ci4y1L7gk?p=7)

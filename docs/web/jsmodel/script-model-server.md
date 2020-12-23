@@ -165,6 +165,8 @@ title: 服务器请求
 				type:'POST',
 				dataType:'json',//自动解析json数据,如果不是json会报错
 				timoout:2000, //设置超时
+                cache:false,//不需要缓存 默认true
+                processData:true,//默认对数据做格式化处理,图片上传不需要则要手动设置false
 				success:function(res){
 					console.log(res)
 				},
