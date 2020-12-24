@@ -107,7 +107,11 @@ var storage = multer.diskStorage({
 
 })
 ```
-
+### api接口
+- url
+- 方法
+- 参数
+- 结果
 ### node 跨域 cors中间件处理
 
 [参考资料](https://www.bilibili.com/video/BV1Ci4y1L7gk?p=7)

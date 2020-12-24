@@ -55,7 +55,7 @@ title: VsCode 编辑器
 - Chinese (Simplified) Language Pack for Visual Studio Code   (中文汉化包)
 - Vetur (vue必装)
 - EditorConfig (是一种被各种编辑器广泛支持的配置 .editorconfig)
-- live-server (可运行的静态文件右键直接开启服务 电脑上也要全局安装)
+- live server (可运行的静态文件右键直接开启服务 电脑上也要全局安装)
 - Better Comments (! * todo //美化注释)
 - Autoprefixer  2.2.0 (前缀 shift+ctrl+p 选择 autoprefixer CSS,电脑上也要全局安装)
 - Code Runner (右键运行各种服务端代码)
