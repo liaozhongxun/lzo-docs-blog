@@ -123,6 +123,33 @@ npm install vconsole -D
 import vConsole from 'vconsole'
 Vue.prototype.$vConsole = new vConsole();
 ```
+### spy-debugger 移动真机调试
+1、安装[github入口](https://github.com/wuchangming/spy-debugger)
+```javascript
+npm install spy-debugger -g
+```
+2、命令行输入 spy-debugger  
+3、手机与电脑连接同一个局域网，根据提示 找到手机的WiFi长按 -> 修改网络 -> 显示高级 -> 代理 ->手动  
+4、对应主机名与端口 保存  
+5、在生成的网址中调试手机访问的页面
+
+### 内网穿透 端口映射工具
+> 内网穿透,反向代理  大概意思是将您的本地主机公开到外网，公共端点和本地运行的 Web 服务器之间建立一个安全的通道，便于测试和共享
+
+[localtunnel](https://www.npmjs.com/package/localtunnel)
+
+#### 安装及使用
+```shell
+  npm install -g localtunnel  
+  lt --port <要映射的端口>
+  lt --subdomain <个性前缀> --port <要映射的端口>
+  # 前缀不能太简单,出现tunnel server offline: Request failed with status code 403, retry 1s
+
+  # 本地开启服务 localhost:<被映射的端口>,访问生成的地址就能访问这个本地服务了
+```
+#### 其他类似工具推荐
+花生壳、PubYun、NoIP、DynDNS、Ngrok、Tunnel、pagekite 等
+
 
 ### 乱七八糟小插件
 - [nprogress](https://www.npmjs.com/package/nprogress)  路由跳转上方出现进度条
@@ -136,11 +163,11 @@ Vue.prototype.$vConsole = new vConsole();
 ### fullpage.js 
 > 基于jQuery的全屏特效插件 [fullpage官网](http://fullpage.81hu.com/)  [bilibili视频](https://www.bilibili.com/video/BV1Ks411V7Kg?p=49)
 
-```python
+```javascript
 bower install fullpage.js
 
-# 1、引入jQuery、fullpage.css、fullpage.js
-# 2、指定全屏结构标签
+// 1、引入jQuery、fullpage.css、fullpage.js
+// 2、指定全屏结构标签
 <div id="fullpage">
     <div class="section">Some section</div>
     <div class="section">Some section</div>
@@ -148,25 +175,25 @@ bower install fullpage.js
     <div class="section">Some section</div>
 </div>
 
-# 3、js操作配置
+// 3、js操作配置
 $(document).ready(function(){
     $('#fullpage').fullpage({
-       #xxxx
-       #在当前屏幕离开之前执行下面方法
+       //xxxx
+       //在当前屏幕离开之前执行下面方法
        onLeave: function(index,nextIndex,dir){
-          '''
+          /*
             当前屏索引、下一屏幕索引、方向
             滚动全屏动画效果方案:
                 给所有屏幕的动画元素加上自定义属性(mat)储存动画class
                 触发改方法的时候去掉当前屏动画
                 给nextIndex中有动画的添加动画
-          '''
-          #清除动画
+          */
+          //清除动画
           $('[mat]').each(function(ind,ele){
               var mat = $(element).attr('mat');
               $(element).removeClass(mat)
           })
-          #下屏添加动画,找到下一屏,找到屏中拥有amt属性的元素,遍历添加类
+          //下屏添加动画,找到下一屏,找到屏中拥有amt属性的元素,遍历添加类
           $('#fullpage .section').eq(nextIndex - 1).find('[amt]').each(function(addi,addele){
               $(addele).addClass($(addele).attr('amt'))
           })
