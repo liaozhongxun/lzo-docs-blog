@@ -114,4 +114,70 @@ var storage = multer.diskStorage({
 - 结果
 ### node 跨域 cors中间件处理
 
+### 身份验证
+http请求 无状态 服务器、客户端相互不认识
+
+基本思路:
+1. 某个用户登录成功后,将用户相关信息加密,生成一个字符串给前端（通过cookie自动传）
+2. 这个用户调用其他接口时，将加密字符串传给服务器，后端通过这些字符判断用户的身份（通过cookie自动传）
+3. 再根据这个用户的权限进行验证，是否可以操作
+
+#### 方案一、session + cookie
+相关插件:
+-  cookie-parser 解析cookie
+-  express-session 
+
+#### 方案二、[jwt](http://jwt.io) （json web token）
+使用步骤:
+- 用户登录 服务器产生一个token(加密字符串)发送给前端
+- 前端将token进行保存  
+- 前端发起数据请求通过 headers 携带 token
+- 服务器验证token是否合法,如果合法继续操作否则终止操作  
+- token应用场景:无状态请求、保存用户登录状态、第三方登录...  
+
+非对称加密:通过私钥产生token、通过公钥解密token
+
+对称加密   
+插件  
+- jsonwebtoken
+  
+```javascript
+const jwt = require("jsonwebtoken");
+const scrict = "jfjdsajfdsajfdsa"; //私钥
+
+let playload = {
+    //传递的数据
+    us: 123,
+    ps: 456,
+};
+
+function creatToken(playload) {
+    //产生token
+    playload.ctime = Date.now();
+    playload.exp = 1000 * 60 * 30; //30分钟过期
+    // 签名 默认hs256加密方式
+    return jwt.sign(playload, scrict);
+}
+
+function checkToken(token) {
+    return new Promise((resovle, reject) => {
+        //验证
+        jwt.verify(token, scrict, (err, data) => {
+            if (err) {
+                reject("token 验证失败");
+            }
+            //ctime + exp < Data().now 说明超时了 
+            resolve(data);
+        });
+    });
+}
+
+module.exports = {
+    creatToken,
+    checkToken,
+};
+
+```
+
+
 [参考资料](https://www.bilibili.com/video/BV1Ci4y1L7gk?p=7)
