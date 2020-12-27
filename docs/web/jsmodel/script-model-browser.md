@@ -87,7 +87,12 @@ title: 浏览器知识点
         'application/json': "{name:'username',age:20}"
         'multipart/form-data': "FormData 对象"
         'Blob/BufferSource': "二进制数据"
-        'text/plain;charset=UTF-8':'字符串格式数据 默认值'
+
+        //服务器返回
+        'text/plain;charset=UTF-8':'普通文本'
+        'text/html;charset=UTF-8':'html标签'
+        //对照表 https://tool.oschina.net/commons)
+        
     Cache-Control: //指定请求和响应遵循的缓存机制，如no-cache
     If-Modified-Since：//对应服务端的Last-Modified，用来匹配看文件是否变动，只能精确到1s之内，http1.0中
     Expires：//缓存控制，在这个时间内不会请求，直接使用缓存，http1.0，而且是服务端时间

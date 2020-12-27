@@ -32,6 +32,11 @@ module.exports = {
             },
             {
                 type: "category",
+                label: "html5",
+                items: ["web/h5model/h5-model-localvideo"],
+            },
+            {
+                type: "category",
                 label: "Style",
                 items: ["web/style-css3", "web/style-flex"],
             },
@@ -62,7 +67,7 @@ module.exports = {
             {
                 type: "category",
                 label: "NodeJS",
-                items: ["server/server-nodejs","server/server-mongodb"],
+                items: ["server/server-nodejs", "server/server-mongodb"],
             },
         ],
         编辑器: ["idea/idea-vscode"],
