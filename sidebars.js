@@ -60,6 +60,7 @@ module.exports = {
                 items: [
                     "web/library/web-library-mockjs",
                     "web/library/web-library-threejs",
+                    "web/library/web-library-https"
                 ],
             },
         ],

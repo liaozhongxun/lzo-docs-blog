@@ -24,9 +24,10 @@ title: h5 本地摄像头视频采集
                 mediaDevices:提供访问链接媒体输入的设备(相机、麦克风、视频等)
             3. 得到用户设备,使用户同意开启摄像头权限
                 getUserMedia
-            4. 得到用户的视频媒体流,输出到video
+			4. 得到用户的视频媒体流,输出到video
+			注意:http协议无法通过ip形式获取getUserMedia,只能通过localhost或改https
         */
-		var constraints = { video: true }; //video: true 使用户可以同意开启
+		var constraints = { video: true ,audio:false}; //video: true 使用户可以同意开启
 		navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
 			//调用设备成功后执行的回调
 			var video = document.querySelector("video");
