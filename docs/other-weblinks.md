@@ -11,11 +11,9 @@ title: 收藏
 ---
 ## 视频学习网站
 + [哔哩哔哩](https://www.bilibili.com/)
-+ [You-need-to-know(CSS3)](https://lhammer.cn/You-need-to-know-css/#/zh-cn/extended-bg-position)
-+ [现代JavaScript教程文档](https://zh.javascript.info/)
-+ [WEB MDN](https://developer.mozilla.org/zh-CN/)
 ---
 ## 文档学习网站
++ [vue3中文文档](https://www.vue3js.cn/docs/zh/guide/installation.html)
 + [CSS3参考手册](https://www.xp.cn/css3/)
 + [You-need-to-know(CSS3)](https://lhammer.cn/You-need-to-know-css/#/zh-cn/extended-bg-position)
 + [现代JavaScript教程文档](https://zh.javascript.info/)
