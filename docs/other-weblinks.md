@@ -10,7 +10,7 @@ title: 收藏
 
 ---
 ## 视频学习网站
-+ [哔哩哔哩](https://www.bilibili.com/)
++ [哔哩哔哩](https://www.bilibili.com/) 
 ---
 ## 文档学习网站
 + [vue3中文文档](https://www.vue3js.cn/docs/zh/guide/installation.html)
