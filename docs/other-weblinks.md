@@ -3,7 +3,13 @@ title: 收藏
 ---
 ## 工具网站
 + [CSS3兼容情况 caniuse](https://caniuse.com)
-+ [线上代码编辑 codepan](https://codepen.io)
++ [线上代码编辑 codepan](https://codepen.io)[^(标注)]
+
+[^(标注)]: 
+创建基础案例 create > pen  
+设置自动保存、更新、格式化 setting > Behavior  
+添加到图钉 pen item图钉 > 左下角菜单出现embed   
+进入embed  > Copy & Paste Code 选择iframe 复制到自己的页面  
 + [CDN插件引用](https://www.bootcdn.cn/)
 + [服务端返回 Content-Type 类型对照表](https://tool.oschina.net/commons)
 
