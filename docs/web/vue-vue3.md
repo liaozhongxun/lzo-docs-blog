@@ -11,3 +11,5 @@ title: vue3
 - 自定义渲染器:可以用来创建自定义渲染器改写vue底层渲染逻辑
 - 新增  Fragment、Teleport、Suspense组件
 - template 下可以放多个标签，vue在内部进行处理
+
+https://www.bilibili.com/video/BV1qK41137XX?p=3
