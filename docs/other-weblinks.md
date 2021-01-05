@@ -32,4 +32,5 @@ title: 收藏
 ---
 ## 其他
 + [total 手机投屏软件](http://tc.sigma-rt.com.cn/)
++ [snipaste 截图](https://zh.snipaste.com/)
 

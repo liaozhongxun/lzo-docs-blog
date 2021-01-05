@@ -12,7 +12,7 @@ module.exports = {
     projectName: "docusaurus", // Usually your repo name.
     themeConfig: {
         navbar: {
-            title: "WEB前端开发",
+            title: "我的WEB文档",
             logo: {
                 alt: "",
                 src: "img/photo.jpg",
