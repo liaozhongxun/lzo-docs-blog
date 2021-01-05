@@ -49,6 +49,9 @@ let c: boolean = true;
 let d: string | number = 20; //联合类型
 
 let arr: number[] = [1, 2, 3]; //数组 只能放数字
+let list: Array<number> = [1, 2, 3];
+let list2: ReadonlyArray<number> = [1, 2, 3]; //list2的元素确保不会被修改
+
 let tuple: [string, number] = ["str", 20]; //元组：固定元素与类型
 let e: null = null;
 let f: undefined = undefined;
@@ -66,6 +69,9 @@ console.log(USER_ENUM.THREE); //three
 //any 都可以类型
 const arr2: any = ["1", 2];
 
+//void类型像是与any类型相反,只能为它赋予undefined和null：
+const vi: void = undefined;
+
 //object 非基础数据类型
 const create = (obj: object) => {};
 create([]);
@@ -77,6 +83,7 @@ create(() => {});
 
 ### 接口
 > 接口是一种能力或一种约束
+
 ```javascript
 //定义一个接口,如果类型不对||使用没有定义的属性||obj属性不够,ts会提示错误
 interface Person {
@@ -84,6 +91,8 @@ interface Person {
     lastName: string;
     age: number;
 }
+
+//我们传入的对象参数实际上会包含很多属性，但是编译器只会检查那些必需的属性是否存在，并且其类型是否匹配
 function showName(person: Person) {
     return person.firsName + person.lastName + "," + person.age + "岁";
 }
@@ -91,6 +100,7 @@ let obj = {
     firsName: "liao",
     lastName: "zhongxun",
     age: 22,
+    xxx:'xxx'
 };
 showName(obj);
 
@@ -129,7 +139,8 @@ let per3: Persion2 = {
 ```
 
 ### 函数
-> test(变量,变量): 返回值{}
+> test(变量,变量): 返回值{} 
+ 
 ```javascript
 //函数 参数、返回值
 function test(a: string, b: string): string {
@@ -149,7 +160,8 @@ let test2: Sum = (a: string, b: string): string => a + b;
 
 ```
 ### 泛型
-> 泛型，在代码执行是传入类型，来确定结果
+> 泛型，在代码执行是传入类型，来确定结果  
+
 ```javascript
 function createArray<T>(value: T): T[] {
     return [value];

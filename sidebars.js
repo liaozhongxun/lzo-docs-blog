@@ -25,6 +25,7 @@ module.exports = {
                 items: [
                     "web/script-es6",
                     "web/script-js",
+                    "web/script-ts",
                     "web/jsmodel/script-model-promise",
                     "web/jsmodel/script-model-server",
                     "web/jsmodel/script-model-browser",
