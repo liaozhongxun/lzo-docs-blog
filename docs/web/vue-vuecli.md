@@ -11,7 +11,7 @@ npm i -g @vue/cli@3.x
 
 yarn global add @vue/cli
 ```
-> 安装成功后能在命令行使用vue相关指令
+> 安装成功后能在命令行使用vue相关指令，如果使用vue3那么cli版本需要在4.3.1以上
 
 删除
 ```

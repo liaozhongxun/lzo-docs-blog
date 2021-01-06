@@ -20,6 +20,8 @@ title: 收藏
 + [哔哩哔哩](https://www.bilibili.com/) 
 ---
 ## 文档学习网站
+
++ [Vue3 组合式 API](https://vue-composition-api-rfc.netlify.app/zh/api.html)
 + [vue3中文文档](https://www.vue3js.cn/docs/zh/guide/installation.html)
 + [CSS3参考手册](https://www.xp.cn/css3/)
 + [You-need-to-know(CSS3)](https://lhammer.cn/You-need-to-know-css/#/zh-cn/extended-bg-position)
