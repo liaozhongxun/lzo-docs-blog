@@ -53,11 +53,15 @@ module.exports = {
                     items: [
                         {
                             label: "码云",
-                            href: "https://gitee.com/liaozhongxun",
+                            href: "https://gitee.com/lzo-gitee",
                         },
                         {
                             label: "GitHub",
                             href: "https://github.com/liaozhongxun",
+                        },
+                        {
+                            label: "码云WEB",
+                            href: "https://lzo-gitee.gitee.io",
                         },
                     ],
                 },
