@@ -30,6 +30,7 @@ title: 收藏
 
 ## GIT项目
 + [CSS-Inspiration(CSS3)](https://github.com/chokcoco/CSS-Inspiration)
++ [javascript-questions 题库](https://github.com/lydiahallie/javascript-questions)
 
 ## UI库
 + [vue3移动端ui库 vant 3.x.x](https://vant-contrib.gitee.io/vant/next/#/zh-CN/quickstart) 
