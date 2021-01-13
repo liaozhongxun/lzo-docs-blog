@@ -63,6 +63,10 @@ module.exports = {
                             label: "码云WEB",
                             href: "https://lzo-gitee.gitee.io",
                         },
+                        {
+                            label:"码云 WEB static BasePath",
+                            href:"https://lzo-gitee.gitee.io/gitee-static/"
+                        }
                     ],
                 },
                 {
