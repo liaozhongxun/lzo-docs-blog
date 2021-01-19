@@ -20,6 +20,7 @@ npm install module-name --save-dev | -D   //自动把模块和版本号添加到
 
 npm install||i //项目中 npm install 下载当前目录下package.json的所有包
 npm i --production //只安装生成环境的包
+npm i git+ssh://git项目地址 //安装git项目
 
 npm list //依赖树
 
@@ -65,4 +66,26 @@ npm config set registry https://registry.npm.taobao.org/  //设置淘宝源
 npm run test1 //运行（start、test等可以简写不需要run）
 npm start
 npm test
+```
+
+## nrm 访问源管理器
+
+```shell
+npm install nrm -g
+
+nrm ls //查看可用源
+nrm use taoba //切换源
+nrm test //测试速度
+```
+
+## npx npm5.2 新增自带
+
+```shell
+npx gulp -v
+# 默认先找项目中是否有gulp
+# 再找本地全局是否有gulp
+# 都没有的话会自带下载gulp，存在临时文件夹中用完自动销毁
+
+npx --no-install gulp -v # 只能有本地的不允许自动安装
+npx --ignore-existing gulp -v # 只能直接安装，不允许使用本地安装的版本
 ```

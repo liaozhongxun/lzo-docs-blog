@@ -40,6 +40,7 @@ nodejs
 + 自定义模块(一个js文件就是一个模块)
 
 #### 模块操作
+> node使用 CommonJS 规范，浏览器是不支持的
 
 ```javascript
 //由于模块作用域,导入后模块间不会互相污染,必须通过导出才可以在外部调用
@@ -53,16 +54,30 @@ module.exports = function () {
 const req = require("./node");
 req();
 -----------------------------------------------
-// 多个导出
+// 多个导出1
 module.exports.export1 = function () {
     console.log("export1");
 };
 module.exports.export2 = function () {
     console.log("export2");
 };
+//多个导出2
+module.exports = {
+    export1,
+    export2
+}
 //导入
 const { export1, export2 } = require("./node");
 export1();
+
+--------------------------------------------------
+//exports 是 module.exports 的引用
+exports.export1 = export1
+exports.export2 = export2
+
+exports = {xxx,xxx} //错误引用改变了
+
+
 ```
 ### 爬虫
 1. 获取目标网站 (http.get)
@@ -189,6 +204,7 @@ module.exports = {
 };
 
 ```
-
+### 开发中常用插件
++ log4js //日志操作
 
 [参考资料](https://www.bilibili.com/video/BV1Ci4y1L7gk?p=7)
