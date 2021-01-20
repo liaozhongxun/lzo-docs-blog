@@ -61,6 +61,11 @@ title: VsCode 编辑器
 - Code Runner (右键运行各种服务端代码)
 - Image Preview (鼠标移入img路径显示图片)
 - codelf 右键变量命名
+- power mode (输入效果)[^①]
+
+[^①]:Powermode: Enabled 开启插件  
+Powermode: Presets 设置效果  
+Powermode: Enable Shake 去除代码抖动  
 
 ## 快捷键
 

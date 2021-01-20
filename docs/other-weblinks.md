@@ -4,9 +4,9 @@ title: 收藏
 ## 工具网站
 + [uTools](https://www.u.tools)  (包含内网穿透、学习文档....)
 + [CSS3兼容情况 caniuse](https://caniuse.com)
-+ [线上代码编辑 codepan](https://codepen.io)[^(标注)]
++ [线上代码编辑 codepan](https://codepen.io)[^①]
 
-[^(标注)]: 
+[^①)]: 
 创建基础案例 create > pen  
 设置自动保存、更新、格式化 setting > Behavior  
 添加到图钉 pen item图钉 > 左下角菜单出现embed   
@@ -38,4 +38,5 @@ title: 收藏
 ## 其他
 + [total 手机投屏软件](http://tc.sigma-rt.com.cn/)
 + [snipaste 截图](https://zh.snipaste.com/)
++ [蓝湖 产品原型设计软件](https://lanhuapp.com/web/#/item)
 
