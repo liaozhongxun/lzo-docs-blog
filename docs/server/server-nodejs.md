@@ -204,6 +204,13 @@ module.exports = {
 };
 
 ```
+### node服务调用谷歌控制台
++ 通过 nodemon --inspect --inspect-brk? server.js 开启服务 
++ 配合debugger使用
++ 谷歌打开地址: chrome://inspect/#devices 
++ 点击 Open dedicated DevTools for Node -> Connection 添加域名端口号
++ 就能在 Open dedicated DevTools for Node -> console 中天使node项目了
+  
 ### 开发中常用插件
 + log4js //日志操作
 
