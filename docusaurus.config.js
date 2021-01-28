@@ -81,6 +81,15 @@ module.exports = {
             ],
             copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
         },
+        algolia: {
+            // apiKey: 'YOUR_API_KEY',
+            // indexName: 'YOUR_INDEX_NAME',
+      
+            contextualSearch: true,
+      
+            searchParameters: {},
+      
+          },
     },
     presets: [
         [
