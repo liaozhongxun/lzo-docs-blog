@@ -89,3 +89,7 @@ npx gulp -v
 npx --no-install gulp -v # 只能有本地的不允许自动安装
 npx --ignore-existing gulp -v # 只能直接安装，不允许使用本地安装的版本
 ```
+
+
+## 同类型
++ [yarn](https://yarn.bootcss.com/docs/usage/)
