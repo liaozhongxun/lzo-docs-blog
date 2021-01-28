@@ -30,6 +30,11 @@ title: 收藏
 + [You-need-to-know(CSS3)](https://lhammer.cn/You-need-to-know-css/#/zh-cn/extended-bg-position)
 + [现代JavaScript教程文档](https://zh.javascript.info/)
 + [WEB MDN](https://developer.mozilla.org/zh-CN/)
++ [lodash 工具库](https://www.lodashjs.com/)[^③]
+
+[^③]:   
+ `sortBy` 对象排序  
+ `size({})` 对象成员个数
 
 ## GIT项目
 + [CSS-Inspiration(CSS3)](https://github.com/chokcoco/CSS-Inspiration)
