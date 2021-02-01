@@ -2,7 +2,7 @@
 title: mongodb
 ---
 
-## 下载安装
+## 下载安装(M层)
 
 [官网下载](https://www.mongodb.com/try/download)
 

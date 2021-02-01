@@ -93,6 +93,20 @@ exports = {xxx,xxx} //错误引用改变了
 + method
 + 接收用户的参数
 
+#### template(V层)
++ ejs
++ pug
++ jade
++ [art-template](http://www.sunxiaoning.com/language/474.html)
+
+前后端分离:管理代码方便
+服务端直接渲染返页面:速度效率快，不方便管理
+#### 页面渲染 render
++ SSR (Server Side render 服务端渲染,返回整个页面)
++ CSR (Client Side render 客户端渲染,返回数据如JSON)
+
+
+
 ### 什么是服务器
 + 服务器
   + 服务器的本质就是一台电脑
@@ -204,6 +218,24 @@ module.exports = {
 };
 
 ```
+### Express RMVP 模式（MVC -> MVP|RMVP -> MVVM ,Web 设计模式）
+ 
+#### MVC
++ M:Model,模型层，数据相关的操作
++ V:View,视图层，用户界面渲染逻辑(html、css...)
++ C:控制器，js
++ MVC之间三方都能相互通讯
+#### MVP
++ M:Model,模型层，数据相关的操作
++ V:View,视图层，用户界面渲染逻辑(html、css...)
++ P:Presenter,响应视图指令，同时进行相关业务处理，必要时候获调用 Model 获取底层数据，返回指令结果到视图，驱动视图渲染
++ MVP中M和V无法通讯
+  + Model 不再负责业务逻辑和视图变化，只负责底层数据处理
+  + View 层只负责发起指令和根据数据渲染 UI，不再有主动监听数据变化等行为，所以也被称之为被动视图
++ R:请求,RMVP是通过请求与控制器通讯(如 app.use("/R",(P)=>{xxx})) 
+#### MVVM
+
+
 ### node服务调用谷歌控制台
 + 通过 nodemon --inspect --inspect-brk? server.js 开启服务 
 + 配合debugger使用
