@@ -64,9 +64,9 @@ module.exports = {
                             href: "https://lzo-gitee.gitee.io",
                         },
                         {
-                            label:"码云 WEB static BasePath",
-                            href:"https://lzo-gitee.gitee.io/gitee-static/"
-                        }
+                            label: "码云 WEB static BasePath",
+                            href: "https://lzo-gitee.gitee.io/gitee-static/",
+                        },
                     ],
                 },
                 {
@@ -81,15 +81,15 @@ module.exports = {
             ],
             copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
         },
-        algolia: {
-            // apiKey: 'YOUR_API_KEY',
-            // indexName: 'YOUR_INDEX_NAME',
-      
-            contextualSearch: true,
-      
-            searchParameters: {},
-      
-          },
+        // algolia: {
+        //     // apiKey: 'YOUR_API_KEY',
+        //     // indexName: 'YOUR_INDEX_NAME',
+
+        //     contextualSearch: true,
+
+        //     searchParameters: {},
+
+        //   },
     },
     presets: [
         [
