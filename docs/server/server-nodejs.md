@@ -98,6 +98,7 @@ exports = {xxx,xxx} //错误引用改变了
 + pug
 + jade
 + [art-template](http://www.sunxiaoning.com/language/474.html)
++ 将vue当做模板放到后端执行就是vue SSR
 
 前后端分离:管理代码方便
 服务端直接渲染返页面:速度效率快，不方便管理

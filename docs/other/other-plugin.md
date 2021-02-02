@@ -68,7 +68,7 @@ bower install xxxx
 ```
 
 ### json-server 生成 REST API
-> 快速生成模拟可访问**REST** API接口,post请求时配置文件自动添加请求数据记录,并且每个接口都能使用GET、PPST、PUT(更新)、DELETE(删除)请求
+> 快速生成模拟可访问**REST** API接口,post请求时配置文件自动添加请求数据记录,并且每个接口都能使用GET、POST、PUT(更新)、DELETE(删除)请求
 
 REST API
 - 同一个请求路径可以进行多个操作

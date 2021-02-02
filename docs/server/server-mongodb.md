@@ -1,6 +1,7 @@
 ---
 title: mongodb
 ---
+> 非关系型数据库-基于分布式文件存储的NoSQL
 
 ## 下载安装(M层)
 
@@ -19,6 +20,7 @@ title: mongodb
 2. 开启数据库
 
 -   终端输入 mongod 执行(一般会提示缺少 C:/data/db 手动新建目录就行了)
+-   或 mongod --dbpath d:/data/db 指定数据库路径
 -   执行成功后后面有一闪一闪的光标,数据库开启成功(窗口不用关闭)
 
 3. 连接数据库
@@ -44,12 +46,18 @@ mongoose #node操作数据库的指令
 show dbs;                  #查看全部不为空的数据库
 
 show collections;          #显示当前数据库中的集合（类似关系数据库中的表）
+    db.createCollection('user11');   #创建集合
+    db.user11.insert|save([{a:1,b:2}])       #插入数据
+    db.user11.update({a:1},{$set:{b:5}})       #修改数据
     db.user11.drop()       #删除名为user11的集合
     db.user11.find()       #查询user11集合的信息
 
 show users;                #查看当前数据库的用户信息
 use <db name>;             #切换数据库(或创建数据库)
 db;或者db.getName();        #查看当前所在数据库
+
+db.getMongo()               #查看db链接机器地址
+db.dropDatabase()           #删除数据库
 ```
 
 ### mongoose
