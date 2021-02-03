@@ -1,0 +1,44 @@
+{
+  "id": "2363528",
+  "name": "gitee-static",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "随时可以用的服务器字体资源",
+  "glyphs": [
+    {
+      "icon_id": "479444",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "554091",
+      "name": "关于",
+      "font_class": "iconset0142",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "1330778",
+      "name": "我",
+      "font_class": "wo",
+      "unicode": "e758",
+      "unicode_decimal": 59224
+    },
+    {
+      "icon_id": "1462897",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "12686932",
+      "name": "详情",
+      "font_class": "icon-",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    }
+  ]
+}

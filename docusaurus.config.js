@@ -3,7 +3,7 @@ module.exports = {
     tagline: "Don't always learn secretly",
     url: "https://your-docusaurus-test-site.com",
     baseUrl: "/",
-    // baseUrl: '/blog/',
+    //baseUrl: '/blog/',
     // noIndex: true, //配置baseUrl这个设置成true
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",

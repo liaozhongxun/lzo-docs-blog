@@ -219,8 +219,10 @@ module.exports = {
 };
 
 ```
-### Express RMVP 模式（MVC -> MVP|RMVP -> MVVM ,Web 设计模式）
+### Express RMVP 模式
+> MVC -> MVP|RMVP -> MVVM ,Web 设计模式
  
+[参考](http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html)
 #### MVC
 + M:Model,模型层，数据相关的操作
 + V:View,视图层，用户界面渲染逻辑(html、css...)
@@ -233,8 +235,12 @@ module.exports = {
 + MVP中M和V无法通讯
   + Model 不再负责业务逻辑和视图变化，只负责底层数据处理
   + View 层只负责发起指令和根据数据渲染 UI，不再有主动监听数据变化等行为，所以也被称之为被动视图
-+ R:请求,RMVP是通过请求与控制器通讯(如 app.use("/R",(P)=>{xxx})) 
++ R:请求,RMVP是通过请求与控制器通讯(如 app.use("/R",xxx)) 
 #### MVVM
++ M:Model,模型层，数据相关的操作
++ V:View,视图层，用户界面渲染逻辑(html、css...)
++ VM:ViewModel,
++ 与MVP唯一的区别是，它采用双向绑定(data-binding),P虽然能与V相互通信,但是VM与V一端变化另一端直接变化
 
 
 ### node服务调用谷歌控制台
@@ -248,3 +254,5 @@ module.exports = {
 + log4js //日志操作
 
 [参考资料](https://www.bilibili.com/video/BV1Ci4y1L7gk?p=7)
+
+
