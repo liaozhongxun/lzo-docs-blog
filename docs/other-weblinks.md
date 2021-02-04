@@ -16,6 +16,7 @@ title: 收藏
 进入embed  > Copy & Paste Code 选择iframe 复制到自己的页面  
 + [CDN插件引用](https://www.bootcdn.cn/)
 + [服务端返回 Content-Type 类型对照表](https://tool.oschina.net/commons)
++ [根据域名查询ip](https://www.ipaddress.com/)
 
 
 ---
