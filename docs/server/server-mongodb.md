@@ -49,8 +49,24 @@ show collections;          #显示当前数据库中的集合（类似关系数�
     db.createCollection('user11');   #创建集合
     db.user11.insert|save([{a:1,b:2}])       #插入数据
     db.user11.update({a:1},{$set:{b:5}})       #修改数据
+    db.user11.delete({a:1})  #删除数据
     db.user11.drop()       #删除名为user11的集合
     db.user11.find()       #查询user11集合的信息
+    db.user11.find({age:{$gt:20}}) #查找age大于2的：$gte 大于等于、 $lt 小于 、$lte 小于等于
+    db.user11.find({age:{$gt:20,$lt:30}}) #20到30之间
+    db.user11.find({$or:[{age:1},{age:2}]}) #或查询
+    db.user11.find({name:/^1/}) #正则查询
+
+    #查询指定列
+    db.user11.find({条件},{name:0,age:0}) #0表示不要，1表示要，只能全部0或全部1
+
+    db.user11.find(xxx).sort({age:1}) #1升序、-1降序
+    db.user11.find(xxx).limit(3) #取指定数目
+    db.user11.find(xxx).limit(3).skep(n) #跳过n条再取指定数目 sort>skep>limit与书写顺序无关
+    db.user11.find(xxx).count() #统计数目
+
+    db.user11.findOne(xxx) #只取一条
+    db.user11.distinct("name")       #查询名称不重复的记录
 
 show users;                #查看当前数据库的用户信息
 use <db name>;             #切换数据库(或创建数据库)
