@@ -24,7 +24,7 @@ module.exports = {
                     label: "文档",
                     position: "right",
                 },
-                { to: "blog", label: "博客", position: "right" },
+                // { to: "blog", label: "博客", position: "right" },
                 {
                     href: "https://github.com/liaozhongxun",
                     label: "GitHub",
@@ -52,12 +52,12 @@ module.exports = {
                     title: "外部链接",
                     items: [
                         {
-                            label: "码云",
-                            href: "https://gitee.com/lzo-gitee",
-                        },
-                        {
                             label: "GitHub",
                             href: "https://github.com/liaozhongxun",
+                        },
+                        {
+                            label: "码云",
+                            href: "https://gitee.com/lzo-gitee",
                         },
                         {
                             label: "码云WEB",
@@ -65,7 +65,7 @@ module.exports = {
                         },
                         {
                             label: "码云 WEB static BasePath",
-                            href: "https://lzo-gitee.gitee.io/gitee-static/",
+                            href: "https://lzo-gitee.gitee.io/gitee-static/images/home.png",
                         },
                     ],
                 },
