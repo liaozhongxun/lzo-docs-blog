@@ -32,6 +32,7 @@ title: 收藏
 + [现代JavaScript教程文档](https://zh.javascript.info/)
 + [WEB MDN](https://developer.mozilla.org/zh-CN/)
 + [lodash 工具库](https://www.lodashjs.com/)[^③]
++ [Vue3+TS 快速上手](https://24kcs.github.io/vue3_study)
 
 [^③]:   
  `sortBy` 对象排序  
