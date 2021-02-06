@@ -14,3 +14,4 @@ title: 自动化构建工具 webpack
 + 安装webpack 、 webpack-cli
 + 需要html入口: 安装 html-webpack-plugin
 + 需要服务：webpack-dev-server
++ 需要复制: copy-webpack-plugin
