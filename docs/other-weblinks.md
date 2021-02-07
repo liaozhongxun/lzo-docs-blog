@@ -44,6 +44,7 @@ title: 收藏
 
 ## UI库
 + [vue3移动端ui库 vant 3.x.x](https://vant-contrib.gitee.io/vant/next/#/zh-CN/quickstart) 
++ [adminLET 模板](http://adminlte.xueyao.org/pages/invoice.html)
 ---
 ## 其他
 + [total 手机投屏软件](http://tc.sigma-rt.com.cn/)
