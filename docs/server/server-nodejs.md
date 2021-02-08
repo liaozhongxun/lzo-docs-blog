@@ -219,6 +219,12 @@ module.exports = {
 };
 
 ```
+
+#### 密码加密 bcrypt
+
+```shell
+npm install bcrypt -S
+```
 ### Express RMVP 模式
 > MVC -> MVP|RMVP -> MVVM ,Web 设计模式
  
