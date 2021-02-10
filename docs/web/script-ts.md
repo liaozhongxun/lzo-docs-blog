@@ -48,11 +48,12 @@ let b: number = 20;
 let c: boolean = true;
 let d: string | number = 20; //联合类型
 
-let arr: number[] = [1, 2, 3]; //数组 只能放数字
+let arr: number[] = [1, 2, 3]; //数组 指定数据类型，只能放数字
 let list: Array<number> = [1, 2, 3];
 let list2: ReadonlyArray<number> = [1, 2, 3]; //list2的元素确保不会被修改
 
 let tuple: [string, number] = ["str", 20]; //元组：固定元素与类型
+//undefined和null是可以赋值给其他类型变量的
 let e: null = null;
 let f: undefined = undefined;
 

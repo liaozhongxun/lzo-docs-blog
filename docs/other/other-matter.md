@@ -10,12 +10,6 @@ title: 偏门问题
 
 ### github.io无法访问的问题
 修改dns为114.114.114.114
-或
-https://blog.csdn.net/weixin_43148062/article/details/108561838
-C:\Windows\System32\drivers\etc：
-192.30.253.113 github.com
-185.199.108.153 github.github.io
-151.101.72.133 assets-cdn.github.com
-151.101.185.194 github.global.ssl.fastly.net
 
-ipconfig /flushdns //再刷新缓存
+### 将网页创建桌面快捷方式
+> chrome://apps/  ->  拖动收藏的网址到页面中 -> 图标上右键创建快捷方式
