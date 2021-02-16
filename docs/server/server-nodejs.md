@@ -221,6 +221,7 @@ module.exports = {
 ```
 
 #### 密码加密 bcrypt
+> 每次加密得到的hash字符串是不一样的,验证时可以通过输入的密码与hash进行匹配
 
 ```shell
 npm install bcrypt -S

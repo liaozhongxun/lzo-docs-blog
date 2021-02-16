@@ -27,8 +27,11 @@ title: 微信小程序
 
 https://www.bilibili.com/video/BV19r4y1N7Br?p=3&spm_id_from=pageDriver
 
+### 快捷操作
++ 将页面新增到编译模式，不用将页面路径移到最前面，就能直接调试指定页面了 
+
 ## 小程序-云开发
-+ 必须要openId
++ 必须要appId
 + 开发者工具新建项目(建议都选择不使用云服务)
 + 进入左上角头像旁边的云开发按钮，随便输入一个合格的环境名称，提交(每个用户能申请两个，用掉后想继续用需要收费的)
 + 设置权限所有用户可读
@@ -41,3 +44,13 @@ https://www.bilibili.com/video/BV19r4y1N7Br?p=3&spm_id_from=pageDriver
 
 ### 云函数
 > 云函数可以调用云数据库的数据，能做一些前端做不到的事情
+> 客户端通过db查询有20条限制，最好通过云函数(基于nodejs)操作  
+> 云函数可以图片用户权限获取数据 
+
+操作:
++ 在根目录(pages同级)新建任意名称文件夹，如:cloudFunc
++ 配置文件 project.config.json 第一级添加 "cloudfunctionRoot":"cloudFunc", 
++ 如果成功 cloudFunc会变成白云图标
++ 右键新建nodejs云函数 
++ 然后客户端的数据库操作都能进云函数使用
++ 函数写好后，在文件夹中右键部署并上传(如果没有node_module，就选不上传node_module的)

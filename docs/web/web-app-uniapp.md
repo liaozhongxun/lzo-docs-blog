@@ -1,5 +1,5 @@
 ---
-title: uni-app
+title: uni-app（功能类似 react Taro）
 ---
 > uni-app基于vue和微信小程序, 一套代码可以发布到ios、Android、h5、以及各种小程序平台
 

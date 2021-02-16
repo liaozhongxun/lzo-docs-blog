@@ -180,6 +180,9 @@ console.log(searchFunc("123", "123"));
 
 //======================================================================
 //类接口
+interface IFly{
+    fly()
+}
 interface IFly2{
     fly2()
 }
@@ -233,7 +236,7 @@ function test(a: number = 123, b?: number,...args:number[]): number {
 test(1,2,3,4,5,6,7,8)
 ```
 
-#### 重载
+#### 重载(未成功)
 > 函数名字相同，但是参数类型或个数不同
 
 
@@ -264,17 +267,81 @@ let test2: Sum = (a: string, b: string): string => a + b;
 > 泛型，在代码执行是传入类型，来确定结果  
 
 ```javascript
-function createArray<T>(value: T): T[] {
-    return [value];
-}
-//let caarr = createArray<number>(1); //固定了类型一定要传number
-let caarr = createArray("1"); //传什么类型T就自动推导成什么类型
+(() => {
+    /**
+     *  泛型:
+     *      在定义接口、函数、类的时候不能确定要使用的数据类型，只能在接口、函数、类调用的时候才能确定的数据类型
+     *       定义时不知道类型，利用T..等字幕占位，调用的时候将类型传入
+     *  T:type
+     */
 
-//多个泛型实现反转
-let swap = <T, K>(tuple: [T, K]): [K, T] => {
-    return [tuple[1], tuple[0]];
-};
+    function createArray<T>(value: T): T[] {
+        return [value];
+    }
 
+    //指定T为number类型number
+    let caarr1 = createArray<number>(1);
+    //一个泛型,调用时如果不指定，编译器通过参数自动推导出T的类型
+    let caarr2 = createArray("1");
+
+    //----------------------------------------------------------------------
+
+    function createArray2<T, K>(value: T, key: K): K[] {
+        return [key];
+    }
+    let ca1 = createArray2<string, number>("123", 123);
+    let ca2 = createArray2("123", true); //通过参数自动推导出T,K的类型
+
+    //----------------------------------------------------------------------
+    //多个泛型实现反转
+    let swap = <T, K>(tuple: [T, K]): [K, T] => {
+        return [tuple[1], tuple[0]];
+    };
+
+    console.log(swap(["123",true]))
+
+    //-----类中----------------------------------------------------
+    class Person<T> {
+        name: T;
+    }
+    new Person<string>()
+
+    //-----接口中--------------------------------------------
+    interface PersonInt <T>{
+        name:T
+    }
+    let pint:PersonInt<string> = {
+        name:"123"
+    }
+    console.log(pint)
+})();
+
+```
+
+#### 泛型约束
+
+```javascript
+(() => {
+    /**
+     *  泛型约束:
+     *      如果直接对一个泛型取length会报错，一个编译器不知道T到的有没有length
+     *      限制调用时传入的内容
+     *      <T extends ILength> //必须有长度,并且可调用split方法
+     */
+
+    //定义一个接口用来约束将来某个类型中必要的length属性
+    interface ILength {
+        length: number;
+        split
+    }
+
+    function getLength<T extends ILength>(x: T): number {
+        x.split("")
+        return x.length;
+    }
+
+    console.log(getLength<string>("ds"))
+})();
 ```
 
 ### 类
@@ -459,4 +526,25 @@ let swap = <T, K>(tuple: [T, K]): [K, T] => {
     console.log(dog.name)
 })();
 
+```
+
+
+### 声明文件
+> 当使用第三方插件时需映入声明文件,才能获得代码补全接口提示的功能
+
+如:jquery  声明文件 @types/jquery   
+安装完成之后存放在node_module/@type文件夹中，运行项目是ts会自动解析到项目中
+
+### 内置对象
+
+```javascript
+(()=>{
+    /**
+     *  内置对象
+     */
+    let str:string = "";
+    let str2:string = new String("str") //“string”是基元，但“String”是包装器对象会报错
+    let str3:String = new String("str") //正确
+    console.log(str,str2,str3)
+})()
 ```

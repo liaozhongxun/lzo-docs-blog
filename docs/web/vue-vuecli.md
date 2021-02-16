@@ -1,7 +1,7 @@
 ---
 title: vue-cli与脚手架
 ---
-### vue-cli 
+## vue-cli 
 [官网](https://cli.vuejs.org/zh/guide/)
 
 安装
@@ -25,19 +25,32 @@ yarn global remove @vue/cli
 vue ui
 ```
 
-### 创建vue项目
+## 创建vue项目
 [相关网址](https://www.cnblogs.com/joe235/archive/2004/01/13/12448744.html)
 
-#### 3.x
-```
+### 3.x
+```shell
 npm i -g @vue/cli
-vue create 项目名称
+# 保证vuecli版本在4.5.0以上 以前3.12.1
+
+vue create <project-name>
 npm run serve
 ```
 
-#### 2.x
+### 使用vite创建
++ vite 是原生ESM驱动的web构建工具,开发环境下基于浏览器原生ES imports开发
++ 本地快速启动,基于rollup打包，不是webpack
+
+``` shell
+npm init vite-app <project-name>
+cd <project-name>
+npm i
+npm run dev
+```
+
+### 2.x
 ```
 npm i -g @vue/cli
-vue init webpack 项目名称
+vue init webpack <project-name>
 npm run dev
 ```
