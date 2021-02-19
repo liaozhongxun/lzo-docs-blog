@@ -13,7 +13,7 @@ npm init -y //生成package.json
 ```
 
 ### npm安装包
-```shell
+```javascript
 npm install module-name --global | -g      //全局安装
 npm install module-name --save | -S      //自动把模块和版本号添加到dependencies(生产环境)部分
 npm install module-name --save-dev | -D   //自动把模块和版本号添加到devDependencies(开发环境)部分
@@ -23,6 +23,11 @@ npm i --production //只安装生成环境的包
 npm i git+ssh://git项目地址 //安装git项目
 
 npm list //依赖树
+
+//查看当前node全局安装路径
+npm config get prefix / npm root -g
+//查看所有node版本公用全局安装路径
+ C:\Users\Administrator\AppData\Roaming\npm
 
 npm view jquery versions //查看插件的所有版本 通过 jquery@x.x.x 安装指定版本
 
@@ -93,3 +98,11 @@ npx --ignore-existing gulp -v # 只能直接安装，不允许使用本地安装
 
 ## 同类型
 + [yarn](https://yarn.bootcss.com/docs/usage/)
++ [简书](https://www.jianshu.com/p/59e990b90483)
+
+```shell
+yarn global add puer 
+yarn global remove puer
+
+yarn global dir # 查看yarn全局安装模块路径
+```
