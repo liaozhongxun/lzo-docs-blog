@@ -167,6 +167,16 @@ http请求 无状态 服务器、客户端相互不认识
 相关插件:
 -  cookie-parser 解析cookie
 -  express-session 
+或
+-  cookie-session
+
+使用步骤:
+1. 用户输入用户名、密码进行登录
+2. 成功后，后端会存一个session，保存用户信息
+3. session值当做cookie内容被种到客户端	
+4. cookie会在请求下一个资源时携带
+5. 后端将cookie内容与session值进行对比，相等通过，不相等不通过
+6. 缺点:服务器需要存每个用户的session
 
 #### 方案二、[jwt](http://jwt.io) （json web token）
 使用步骤:
@@ -176,15 +186,31 @@ http请求 无状态 服务器、客户端相互不认识
 - 服务器验证token是否合法,如果合法继续操作否则终止操作  
 - token应用场景:无状态请求、保存用户登录状态、第三方登录...  
 
-非对称加密:通过私钥产生token、通过公钥解密token
+两种加密方式:
+非对称加密:RS256...
+    通过私钥产生token、通过公钥解密token
+    指加密和解密使用不同密钥的加密算法,也称为公私钥加密。
+    
 
-对称加密   
+```shell
+# openssl方式
+# 生成私钥 
+openssl 回车
+OpenSSL> genrsa -out rsa_private_key.pem 2048  #(-out 文件名 字符数) 
+
+# 根据私钥生成公钥
+OpenSSL> rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem #(-in 私钥名 -pubout -out 公钥名)
+```
+
+对称加密：指加密和解密使用`相同密钥`的加密算法。对称加密算法用来对敏感数据等信息进行加密,常用的算法包括DES、3DES、AES、DESX、Blowfish、RC4、...
+
+
 插件  
 - jsonwebtoken
   
 ```javascript
 const jwt = require("jsonwebtoken");
-const scrict = "jfjdsajfdsajfdsa"; //私钥
+const scrict = "jfjdsajfdsajfdsa"; //私钥 （对称加密解密都是它）
 
 let playload = {
     //传递的数据

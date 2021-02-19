@@ -17,3 +17,10 @@ title: 偏门问题
 ### 移动端click延迟处理
 > 移动端200-300ms延迟可以使用 `fastclick`插件或将click事件替换`tab事件`来解决  
 >  tap 事件不是原生的，zepto、微信小程序等都有封装
+
+### STAR法则
+
++ S: situation(项目背景)
++ T: task(任务目标)
++ A: action(采取的行动)
++ R: result(产生的结果)
