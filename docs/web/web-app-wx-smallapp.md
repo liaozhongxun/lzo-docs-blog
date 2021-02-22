@@ -5,6 +5,8 @@ title: 微信小程序
 
 [官方文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html)
 ## 环境
+### 关键字
++ openId:openid相当重要，它是用户的唯一标识id
 ## 目录结构
 ### page 文件夹
 > 小程序页面, 快捷创建方式: `app.json` -> `pages` -> `直接添加路径保存`，就能直接生成`整个页面文件`了
