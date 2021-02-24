@@ -17,6 +17,7 @@ title: 收藏
 + [CDN插件引用](https://www.bootcdn.cn/)
 + [服务端返回 Content-Type 类型对照表](https://tool.oschina.net/commons)
 + [根据域名查询ip](https://www.ipaddress.com/)
++ [极速api接口](https://www.jisuapi.com/my/apply?classid=4) 
 
 
 ---
