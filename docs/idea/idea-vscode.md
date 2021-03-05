@@ -101,3 +101,15 @@ Powermode: Enable Shake 去除代码抖动
 - Markdown All in One (快捷键自动不全编写markdown文档)
 - Markdown Preview Enhanced (预览)
 - Paste Image (快速插入图片，网站随便找图片，复制图片，ctrl+alt+v)
+
+## 终端使用cmder
+```json
+{
+    // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\cmd.exe",
+    // "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.env.windows": {"CMDER_ROOT": "[D:\\install\\cmder\\Cmder]"},
+    "terminal.integrated.shellArgs.windows": ["/k", "[D:\\install\\cmder\\Cmder]\\vendor\\init.bat"],
+}
+```
