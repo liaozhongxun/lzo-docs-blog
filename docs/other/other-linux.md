@@ -48,6 +48,7 @@ title: Linux
 ### 业务操作命令
 
 -   `pwd` ：查看当前所在路径
+    - `-P`: 对于软连接文件 显示真实所在的路径 并非快捷方式的路径   
 -   `su <user-name>` ： 切换用户
 -   `passwd <user-name>` ：更改用户密码（需要交互）
     -   `echo '123' | passwd --stdin <user-name>`：直接设置
@@ -61,6 +62,7 @@ title: Linux
     -   -a ： 查看所以文件包括隐藏文件
     -   -d ： 查看目录`自己的`信息
     -   -h ： 以 k、M 格式显示文件大小
+    -   -R ：当前目录为根节点，列出所有子节点
     -   --help ：单词一般都有两个杠
 -   `touch <file-name>`：创建空文件
 -   `mkdir <name1> <name2>`：创建空文件夹
