@@ -206,3 +206,81 @@ git clone https://github.com/liaozhongxun/xxx.git
 添加成功后本台计算机就能和远程仓库进行 ssh 交互了
 
 [参考资料 后续继续](https://www.bilibili.com/video/BV1yz4y1y7RQ?p=40)
+
+
+## git服务器环境搭建
+
+- 进入 /usr/src 下载 gitisos 
+```shell
+yum install -y python python-setuptools git-core # 系统一般有自动基本可以不用安装
+git clone git://github.com/res0nat0r/gitosis.git
+cd gitosis
+python setup.py install
+```
+
+- 管理员客户端通过ssh 生成公钥
+```shell
+ssh-keygen -t rsa # 用户目录下 /.ssh/id_rsa.pub
+```
+
+- 初始化项目
+```shell
+#新建一个git用户
+useradd -m git
+su - git
+gitosis-init< 管理员id_rsa.pub所在路径
+
+# /home/git下面生成gitosis和repositories
+# 确保/home/git/repositories/gitosis-admin.git/hooks/post-update具有执行权限
+```
+
+- 管理员的客户端
+
+```shell
+git clone git@< server ip >:gitosis-admin.git
+
+# gitosis-admin项目下有一个gitosis.conf文件和一个keydir目录
+```
+
+1、`gitosis.conf`用来配置git项目和用户,`keydir`存放用户的公钥,公钥必须pub结尾
+
+```shell
+[gitosis]
+
+[group gitosis-admin] # gitosis-admin管理所以项目
+members = lzoxunc@LAPTOP-DGM7G15T
+writable = gitosis-admin  # 对应keydir下有一个 lzoxunc@LAPTOP-DGM7G15T.pub 公钥文件
+```
+
+- 添加新项目
+
+```shell
+[gitosis]
+
+[group gitosis-admin] # gitosis-admin管理所以项目
+members = lzoxunc@LAPTOP-DGM7G15T
+writable = gitosis-admin  # 对应keydir下有一个 lzoxunc@LAPTOP-DGM7G15T.pub 公钥文件
+
+[group new-project]  # 手动添加 ，相当于在github创建新项目 产生一个地址 git@192.168.152.130:new-project.git
+writable = new-project
+members = lzoxunc@LAPTOP-DGM7G15T username2 #多个用户用空格分开,这时keydir下需要存在username2.pub 公钥，
+# 多用户，只要username2客户端可以ping 通服务器ip 那么就可以正常使用了
+```
+
+- 发布内容
+
+> 这时 /home/git/repositories 下只有 gitosis-admin.get 一个项目
+
+``` shell
+#  new-project members 存在的用户客户端任意位置
+mkdir new-project
+cd new-project
+git init
+git add .
+git commit xxx
+
+git remote add origin git@< server ip >:new-project.git
+git push origin master
+
+# 这时 /home/git/repositories 下会多一个new-project.git
+```

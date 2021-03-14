@@ -3,7 +3,10 @@ title: Linux
 ---
 
 ## 基础简介
-
+-   安装[国内阿里云镜像](http://mirrors.aliyun.com/centos/)
+-   安装[国内搜狐镜像](http://mirrors.sohu.com/)
+    - 比较老版本可能不提供下载，需找较新的版本
+    - 选择软件，默认最小安装，初学者建议选择带GUI的服务器
 -   虚拟机
     -   快照：保持当前状态，后期玩坏了随时可回到这里
     -   克隆：完全克隆与连接克隆，链接克隆相当于创建一个子系统，只要父系统没事，子系统就能随便搞
@@ -80,10 +83,15 @@ title: Linux
 -   文件查找
     -   `locate <file name>`:返回文件所在路径,根据索引数据库查找，一段时间后数据库自动更新
     -   `find`: find <查找起始路径> <选项> <查找条件> <处理动作>
+        -   `起始路径`:
         -   `选项`:
-            -   `-name` :文件名
-        -   `查找条件`:文件名称、文件大小、文件类型、从属关系、权限等
-        -   `处理动作`:
+            -   `-name` :按文件名查找
+            -   `-empty` :空文件或文件夹
+            -   `-type 文件类型` :查找指定类型的文件(f、d、l、b、c) f 代替 - 普通文件
+            -   `-not`:取反
+            -   `-size、`:
+        -   `查找条件`:文件名称是什么、文件大小、文件类型、从属关系、权限等（通配符）
+        -   `处理动作`:对找到的文件 进行指令操作如:ls
 
 ### 文件内容操作
 
@@ -207,3 +215,23 @@ title: Linux
 
 -   $SHELL :一般全大写的系统自带环境变量
 -   uname :查看系统信息
+
+### 注意事项
+
+> 去除 centos 滴滴提示音
+
+```shell
+# 1.执行
+vi /etc/inputrc
+# 将 #set bell-style none 把这一行的#去掉
+# 2、执行
+vi ~/.bashrc
+# 添加：setterm –blength 0
+3、执行：reboot
+```
+
+- 新系统需要的一些设置
+    - 设置中文编码
+        - echo LANG="zh_CN.gbk" >> /etc/locale.conf
+    - 开启网卡（最小化安装时没开的 不能使用ifconfig指令）
+        - echo ONBOOT=yes >> /etc/sysconfig/network-scripts/ifcfg-ens33
